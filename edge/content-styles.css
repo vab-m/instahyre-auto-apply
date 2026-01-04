@@ -1,0 +1,60 @@
+/* Content styles injected into Instahyre pages */
+
+/* Highlight currently processing job card */
+.instahyre-auto-apply-current {
+    outline: 3px solid #00bcd4 !important;
+    outline-offset: 2px;
+    position: relative;
+}
+
+.instahyre-auto-apply-current::before {
+    content: '⚡ Processing...';
+    position: absolute;
+    top: -25px;
+    left: 0;
+    background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    z-index: 9999;
+}
+
+/* Applied indicator */
+.instahyre-auto-apply-done {
+    position: relative;
+}
+
+.instahyre-auto-apply-done::after {
+    content: '✓ Applied';
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #4caf50;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    z-index: 9999;
+}
+
+/* Skipped indicator */
+.instahyre-auto-apply-skipped {
+    opacity: 0.6;
+}
+
+.instahyre-auto-apply-skipped::after {
+    content: '⏭ Skipped';
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #ff9800;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    z-index: 9999;
+}
